@@ -1,11 +1,11 @@
 Primary Vagrant
 =============
 
-##Note
+## Note
 
 I've done some heavy updates to Primary Vagrant to utilize Ubuntu 14.04 as well as a few other goodies. If you don't want to or can't update for some reason you can find the old version in the [Precise](https://github.com/ChrisWiegman/Primary-Vagrant/tree/Precise) branch.
 
-##About
+## About
 
 Primary Vagrant is intended for WordPress plugin, theme, and core development, as well as general PHP development, and can be used as a replacement for local development stacks such as MAMP, XAMPP, and others.
 
@@ -35,19 +35,19 @@ The repository contains a basic Vagrant configuration that will configure the fo
 * GIT
 * Subversion
 
-##Contributors
+## Contributors
 
 * [ChrisWiegman](https://github.com/ChrisWiegman)
 * [kraftner](https://github.com/kraftner)
 * [michaelbeil](https://github.com/michaelbeil)
 
-##Want to help?
+## Want to help?
 
 If you find any issues please don't hesitate to submit a pull request.
 
 Current development of the project is focusing on instituting multiple PHP versions using (at least for now) [phpbrew](https://github.com/phpbrew/phpbrew). It needs a lot of work, so if you have a few minutes head on over to the [phpbrew puppet module](https://github.com/ChrisWiegman/puppet-phpbrew) and dig in.
 
-##Getting Started
+## Getting Started
 
 ### Default domains
 
@@ -61,7 +61,7 @@ Current development of the project is focusing on instituting multiple PHP versi
 * webgrind.pv - webgrind
 * mailcatcher.pv - MailCatcher
 
-###Install the software
+### Install the software
 
 Install [Vagrant](http://vagrantup.com), [VirtualBox](http://virtualbox.org), and the [VirtualBox extensions](https://www.virtualbox.org/wiki/Downloads) for your environment.
 
@@ -71,15 +71,19 @@ Once Vagrant is installed you'll want two plugins to update your local hosts fil
 
 ```vagrant plugin install vagrant-hostsupdater```
 
-###Launch your VM
+### Launch your VM
 
-1.  [Download](https://github.com/ChrisWiegman/Primary-Vagrant/archive/master.zip) or clone this repo onto your local machine:
+1. [Download](https://github.com/ChrisWiegman/Primary-Vagrant/archive/master.zip) or clone this repo onto your local machine:
 
-    ```$ git clone --recursive git@github.com:ChrisWiegman/Primary-Vagrant.git Primary-Vagrant```	
+    ```$ git clone --recursive git@github.com:ChrisWiegman/Primary-Vagrant.git PV```
 
-2.  Run ```vagrant up``` from the folder where you're storing this repository
+1. In a command prompt, change into the new directory with `cd PV`
 
-###Preconfigured Sites
+1. Start the Vagrant environment with `vagrant up`
+	- Be patient as the magic happens. This could take a while on the first run as your local machine downloads the required files.
+	- Watch as the script ends, as an administrator or `su` ***password may be required*** to properly modify the hosts file on your local machine.
+
+### Preconfigured Sites
 
 The following websites come pre-configured in the system:
 
@@ -91,7 +95,7 @@ The following websites come pre-configured in the system:
 
 *Note: WordPress Core dev is taken from git://develop.git.wordpress.org/. Only the src folder is mapped. You can manually set up a build site if desired.
 
-###Configure your Apache VirtualHosts
+### Configure your Apache VirtualHosts
 
 Edit the file **Vagrantfile** and add paths to your own websites as well as a host entry to reach it.
 
@@ -111,13 +115,13 @@ apache::vhost { 'mysite.pv':
 
 *Note: I've provided a top-level wildcard SSL certificate. No further SSL certificate should be needed.
 
-###Change PHP Versions
+### Change PHP Versions
 
-To change from PHP 5.5 I recommend using a PGP package from [https://launchpad.net/~ondrej/+archive/php5](https://launchpad.net/~ondrej/+archive/php5). You can do so by adding ```apt::ppa { 'ppa:ondrej/php5': }``` to *manifests/php.pp*. Make sure to choose the correct repository for the PHP version you want to use.
+To change from PHP 5.5, I recommend using a PGP package from [https://launchpad.net/~ondrej/+archive/php5](https://launchpad.net/~ondrej/+archive/php5). You can do so by adding ```apt::ppa { 'ppa:ondrej/php5': }``` to *manifests/php.pp*. Make sure to choose the correct repository for the PHP version you want to use.
 
 Note: this file can also be used to change any php.ini value following the example included in the file.
 
-###Database Access
+### Database Access
 
 You can access the database via ssh tunnel into the machine using the *local.vagrant* hostname, the username *vagrant*, the password *vagrant* for ssh, and the username *root* without a password for MySQL.
 
@@ -134,14 +138,14 @@ mysql_database { 'database_name':
 }
 ```
 
-###Postfix Configuration
+### Postfix Configuration
 
 Postfix is configured and set to use your host computer as a mail relay. To receive messages you can use the built in [MailCatcher installation](http://mailcatcher.pv:1080) (this will prevent your real SMTP mail server and mailbox from getting too much abuse).
 
-###WP Test Data
+### WP Test Data
 WP Test can be installed via the instructions at (https://github.com/manovotny/wptest). Test data is found in *[Primary Vagrant Folder]/sites/wordpress/wptest* on your host machine.
 
-###node.js
+### node.js
 
 The latest stable node.js version is installed, if you want to pre-install packages just add them to *manifests/nodejs.pp*.
 
@@ -154,7 +158,7 @@ package { 'ungit':
 }
 ```
 
-###Keep your fork up to date with the PV `upstream/master` repo 
+### Keep your fork up to date with the PV `upstream/master` repo 
 
 * Configure a remote that points to the upstream repository in Git: `git remote add upstream https://github.com/ChrisWiegman/Primary-Vagrant.git` 
 
@@ -172,6 +176,6 @@ See: https://www.atlassian.com/git/tutorials/syncing/git-pull
 
 Now, you will be free to PR against Primary Vagrant.
 
-##Note
+## Note
 
 This server configuration is designed for development use only. Please don't put it on a production server as some of these settings would cause serious security issues.
