@@ -5,6 +5,8 @@ Primary Vagrant
 
 I've done some heavy updates to Primary Vagrant to utilize Ubuntu 14.04 as well as a few other goodies. If you don't want to or can't update for some reason you can find the old version in the [Precise](https://github.com/ChrisWiegman/Primary-Vagrant/tree/Precise) branch.
 
+**For the latest updates to Primary Vagrant, check out our [dev branch](https://github.com/ChrisWiegman/Primary-Vagrant/tree/dev).**
+
 ## About
 
 Primary Vagrant is intended for WordPress plugin, theme, and core development, as well as general PHP development, and can be used as a replacement for local development stacks such as MAMP, XAMPP, and others.
