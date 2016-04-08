@@ -72,6 +72,7 @@ Vagrant.configure("2") do |config|
 		v.customize ["modifyvm", :id, "--name", "Primary Vagrant"]
 		v.customize ["modifyvm", :id, "--cpus", 1]
 		v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+		v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
 	end
 
 	# Don't check for updates with every vagrant up
@@ -102,7 +103,7 @@ Vagrant.configure("2") do |config|
 	config.vm.synced_folder "www/default/Search-Replace-DB", "/var/www/replacedb.pv", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
 	config.vm.synced_folder "www/default/phpmyadmin", "/var/www/phpmyadmin.pv", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
 	config.vm.synced_folder "www/default/webgrind", "/var/www/webgrind.pv", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
-
+	config.vm.synced_folder "raven-marketdirect-woocommerce", "/var/www/stable.wordpress.pv/htdocs/content/plugins/avren-wpwc-md", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
 	# /Vagrant Data
 	#
 	# Specify a folder for various vagrant data. A MySQL data folder would be appropriate here (for example).

@@ -85,3 +85,10 @@
 [submodule "www/default/wordpress/content/plugins/any-ipsum"]
 	path = www/default/wordpress/content/plugins/any-ipsum
 	url = git@github.com:petenelson/wp-any-ipsum.git
+[submodule "www/default/wordpress/content/plugins/woocommerce"]
+	path = www/default/wordpress/content/plugins/woocommerce
+	url = git@github.com:woothemes/woocommerce.git
+	branch = master
+[submodule "modules/ngrok"]
+	path = modules/ngrok
+	url = git@github.com:kevinneufeld/puppet-ngrok.git
