@@ -341,3 +341,4 @@ file { 'sudoers':
 class { 'mailcatcher': }
 
 import 'sites/*.pp'
+import 'mymodules/*.pp'

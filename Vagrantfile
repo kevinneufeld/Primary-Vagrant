@@ -69,7 +69,7 @@ Vagrant.configure("2") do |config|
 	config.vm.provider :virtualbox do |v|
 		v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
 		v.customize ["modifyvm", :id, "--memory", 1024]
-		v.customize ["modifyvm", :id, "--name", "Primary Vagrant"]
+		v.customize ["modifyvm", :id, "--name", "PriVagrant"]
 		v.customize ["modifyvm", :id, "--cpus", 1]
 		v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
 		v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]

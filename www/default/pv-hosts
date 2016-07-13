@@ -2,6 +2,7 @@ mailcatcher.pv
 phpmyadmin.pv
 replacedb.pv
 wordpress.stable.pv
+wordpress.rustycog.com
 wordpress.core.pv
 wordpress.legacy.pv
 wordpress.trunk.pv
