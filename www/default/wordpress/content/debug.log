@@ -1,0 +1,83 @@
+[12-Apr-2016 06:03:02 UTC] PHP Strict standards:  Redefining already defined constructor for class WXR_Parser_Regex in /var/www/stable.wordpress.pv/htdocs/content/plugins/wordpress-importer/parsers.php on line 408
+[12-Apr-2016 06:03:02 UTC] PHP Stack trace:
+[12-Apr-2016 06:03:02 UTC] PHP   1. {main}() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:0
+[12-Apr-2016 06:03:02 UTC] PHP   2. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:12
+[12-Apr-2016 06:03:02 UTC] PHP   3. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:31
+[12-Apr-2016 06:03:02 UTC] PHP   4. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-load.php:42
+[12-Apr-2016 06:03:02 UTC] PHP   5. require_once() /var/www/stable.wordpress.pv/htdocs/wp-config.php:101
+[12-Apr-2016 06:03:02 UTC] PHP   6. include_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-settings.php:254
+[12-Apr-2016 06:03:02 UTC] PHP Strict standards:  Declaration of WP_Import::bump_request_timeout() should be compatible with WP_Importer::bump_request_timeout($val) in /var/www/stable.wordpress.pv/htdocs/content/plugins/wordpress-importer/wordpress-importer.php on line 38
+[12-Apr-2016 06:03:02 UTC] PHP Stack trace:
+[12-Apr-2016 06:03:02 UTC] PHP   1. {main}() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:0
+[12-Apr-2016 06:03:02 UTC] PHP   2. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:12
+[12-Apr-2016 06:03:02 UTC] PHP   3. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:31
+[12-Apr-2016 06:03:02 UTC] PHP   4. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-load.php:42
+[12-Apr-2016 06:03:02 UTC] PHP   5. require_once() /var/www/stable.wordpress.pv/htdocs/wp-config.php:101
+[12-Apr-2016 06:03:02 UTC] PHP   6. include_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-settings.php:254
+[12-Apr-2016 06:03:57 UTC] PHP Strict standards:  Declaration of WP_Import::bump_request_timeout() should be compatible with WP_Importer::bump_request_timeout($val) in /var/www/stable.wordpress.pv/htdocs/content/plugins/wordpress-importer/wordpress-importer.php on line 38
+[12-Apr-2016 06:03:57 UTC] PHP Stack trace:
+[12-Apr-2016 06:03:57 UTC] PHP   1. {main}() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:0
+[12-Apr-2016 06:03:57 UTC] PHP   2. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:12
+[12-Apr-2016 06:03:57 UTC] PHP   3. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:31
+[12-Apr-2016 06:03:57 UTC] PHP   4. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-load.php:42
+[12-Apr-2016 06:03:57 UTC] PHP   5. require_once() /var/www/stable.wordpress.pv/htdocs/wp-config.php:101
+[12-Apr-2016 06:03:57 UTC] PHP   6. include_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-settings.php:254
+[12-Apr-2016 15:46:28 UTC] PHP Strict standards:  Redefining already defined constructor for class WXR_Parser_Regex in /var/www/stable.wordpress.pv/htdocs/content/plugins/wordpress-importer/parsers.php on line 408
+[12-Apr-2016 15:46:28 UTC] PHP Stack trace:
+[12-Apr-2016 15:46:28 UTC] PHP   1. {main}() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:0
+[12-Apr-2016 15:46:28 UTC] PHP   2. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:12
+[12-Apr-2016 15:46:28 UTC] PHP   3. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:31
+[12-Apr-2016 15:46:28 UTC] PHP   4. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-load.php:42
+[12-Apr-2016 15:46:28 UTC] PHP   5. require_once() /var/www/stable.wordpress.pv/htdocs/wp-config.php:101
+[12-Apr-2016 15:46:28 UTC] PHP   6. include_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-settings.php:254
+[12-Apr-2016 15:46:28 UTC] PHP Strict standards:  Declaration of WP_Import::bump_request_timeout() should be compatible with WP_Importer::bump_request_timeout($val) in /var/www/stable.wordpress.pv/htdocs/content/plugins/wordpress-importer/wordpress-importer.php on line 38
+[12-Apr-2016 15:46:28 UTC] PHP Stack trace:
+[12-Apr-2016 15:46:28 UTC] PHP   1. {main}() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:0
+[12-Apr-2016 15:46:28 UTC] PHP   2. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:12
+[12-Apr-2016 15:46:28 UTC] PHP   3. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:31
+[12-Apr-2016 15:46:28 UTC] PHP   4. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-load.php:42
+[12-Apr-2016 15:46:28 UTC] PHP   5. require_once() /var/www/stable.wordpress.pv/htdocs/wp-config.php:101
+[12-Apr-2016 15:46:28 UTC] PHP   6. include_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-settings.php:254
+[12-Apr-2016 15:46:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/stable.wordpress.pv/htdocs/content/plugins/wordpress-importer/wordpress-importer.php:38) in /var/www/stable.wordpress.pv/htdocs/wordpress/wp-includes/option.php on line 820
+[12-Apr-2016 15:46:28 UTC] PHP Stack trace:
+[12-Apr-2016 15:46:28 UTC] PHP   1. {main}() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:0
+[12-Apr-2016 15:46:28 UTC] PHP   2. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:12
+[12-Apr-2016 15:46:28 UTC] PHP   3. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:301
+[12-Apr-2016 15:46:28 UTC] PHP   4. wp_user_settings() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin-header.php:58
+[12-Apr-2016 15:46:28 UTC] PHP   5. setcookie('wp-settings-1', '', 1492011988, '/wordpress/', '', FALSE) /var/www/stable.wordpress.pv/htdocs/wordpress/wp-includes/option.php:820
+[12-Apr-2016 15:46:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/stable.wordpress.pv/htdocs/content/plugins/wordpress-importer/wordpress-importer.php:38) in /var/www/stable.wordpress.pv/htdocs/wordpress/wp-includes/option.php on line 821
+[12-Apr-2016 15:46:28 UTC] PHP Stack trace:
+[12-Apr-2016 15:46:28 UTC] PHP   1. {main}() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:0
+[12-Apr-2016 15:46:28 UTC] PHP   2. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:12
+[12-Apr-2016 15:46:28 UTC] PHP   3. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:301
+[12-Apr-2016 15:46:28 UTC] PHP   4. wp_user_settings() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin-header.php:58
+[12-Apr-2016 15:46:28 UTC] PHP   5. setcookie('wp-settings-time-1', '1460475988', 1492011988, '/wordpress/', '', FALSE) /var/www/stable.wordpress.pv/htdocs/wordpress/wp-includes/option.php:821
+[12-Apr-2016 15:48:01 UTC] PHP Strict standards:  Declaration of WP_Import::bump_request_timeout() should be compatible with WP_Importer::bump_request_timeout($val) in /var/www/stable.wordpress.pv/htdocs/content/plugins/wordpress-importer/wordpress-importer.php on line 38
+[12-Apr-2016 15:48:01 UTC] PHP Stack trace:
+[12-Apr-2016 15:48:01 UTC] PHP   1. {main}() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:0
+[12-Apr-2016 15:48:01 UTC] PHP   2. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/import.php:12
+[12-Apr-2016 15:48:01 UTC] PHP   3. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:31
+[12-Apr-2016 15:48:01 UTC] PHP   4. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-load.php:42
+[12-Apr-2016 15:48:01 UTC] PHP   5. require_once() /var/www/stable.wordpress.pv/htdocs/wp-config.php:101
+[12-Apr-2016 15:48:01 UTC] PHP   6. include_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-settings.php:254
+[12-Apr-2016 15:48:04 UTC] PHP Strict standards:  Declaration of WP_Import::bump_request_timeout() should be compatible with WP_Importer::bump_request_timeout($val) in /var/www/stable.wordpress.pv/htdocs/content/plugins/wordpress-importer/wordpress-importer.php on line 38
+[12-Apr-2016 15:48:04 UTC] PHP Stack trace:
+[12-Apr-2016 15:48:04 UTC] PHP   1. {main}() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:0
+[12-Apr-2016 15:48:04 UTC] PHP   2. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:31
+[12-Apr-2016 15:48:04 UTC] PHP   3. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-load.php:42
+[12-Apr-2016 15:48:04 UTC] PHP   4. require_once() /var/www/stable.wordpress.pv/htdocs/wp-config.php:101
+[12-Apr-2016 15:48:04 UTC] PHP   5. include_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-settings.php:254
+[12-Apr-2016 15:49:21 UTC] PHP Strict standards:  Declaration of WP_Import::bump_request_timeout() should be compatible with WP_Importer::bump_request_timeout($val) in /var/www/stable.wordpress.pv/htdocs/content/plugins/wordpress-importer/wordpress-importer.php on line 38
+[12-Apr-2016 15:49:21 UTC] PHP Stack trace:
+[12-Apr-2016 15:49:21 UTC] PHP   1. {main}() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:0
+[12-Apr-2016 15:49:21 UTC] PHP   2. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:31
+[12-Apr-2016 15:49:21 UTC] PHP   3. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-load.php:42
+[12-Apr-2016 15:49:21 UTC] PHP   4. require_once() /var/www/stable.wordpress.pv/htdocs/wp-config.php:101
+[12-Apr-2016 15:49:21 UTC] PHP   5. include_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-settings.php:254
+[12-Apr-2016 15:49:40 UTC] PHP Strict standards:  Declaration of WP_Import::bump_request_timeout() should be compatible with WP_Importer::bump_request_timeout($val) in /var/www/stable.wordpress.pv/htdocs/content/plugins/wordpress-importer/wordpress-importer.php on line 38
+[12-Apr-2016 15:49:40 UTC] PHP Stack trace:
+[12-Apr-2016 15:49:40 UTC] PHP   1. {main}() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:0
+[12-Apr-2016 15:49:40 UTC] PHP   2. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-admin/admin.php:31
+[12-Apr-2016 15:49:40 UTC] PHP   3. require_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-load.php:42
+[12-Apr-2016 15:49:40 UTC] PHP   4. require_once() /var/www/stable.wordpress.pv/htdocs/wp-config.php:101
+[12-Apr-2016 15:49:40 UTC] PHP   5. include_once() /var/www/stable.wordpress.pv/htdocs/wordpress/wp-settings.php:254

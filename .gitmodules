@@ -40,6 +40,3 @@
 [submodule "provision/modules/php"]
 	path = provision/modules/php
 	url = https://github.com/mayflower/puppet-php.git
-[submodule "provision/modules/apt"]
-	path = provision/modules/apt
-	url = git@github.com:puppetlabs/puppetlabs-apt.git
