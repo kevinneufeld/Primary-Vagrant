@@ -92,7 +92,7 @@ Vagrant.configure("2") do |config|
 
 	# config.vm.synced_folder "www/default/wordpress/legacy", "/var/www/legacy.wordpress.pv", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
 	# config.vm.synced_folder "www/default/wordpress/trunk", "/var/www/trunk.wordpress.pv", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
- 	# config.vm.synced_folder "www/default/wordpress/core", "/var/www/core.wordpress.pv", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
+	# config.vm.synced_folder "www/default/wordpress/core", "/var/www/core.wordpress.pv", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
 	# config.vm.synced_folder "www/default/wordpress/content", "/var/www/stable.wordpress.pv/htdocs/content", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
 	# config.vm.synced_folder "www/default/wordpress/content", "/var/www/trunk.wordpress.pv/htdocs/content", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
 	# config.vm.synced_folder "www/default/wordpress/content", "/var/www/legacy.wordpress.pv/htdocs/content", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
@@ -103,6 +103,9 @@ Vagrant.configure("2") do |config|
 	config.vm.synced_folder "www/default/webgrind", "/var/www/webgrind.pv", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
 
 	config.vm.synced_folder "www/default/wordpress/stable", "/var/www/stable.wordpress.pv", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
+
+	config.vm.synced_folder "www/default/wordpress/wprustycog", "/var/www/wordpress.rustycog.com", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
+	config.vm.synced_folder "www/default/wordpress/content", "/var/www/wordpress.rustycog.com/htdocs/content", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
 	config.vm.synced_folder "ProjectLinks/raven-iframe-woocommerce", "/var/www/wordpress.rustycog.com/htdocs/content/plugins/raven-iframe-woocommerce", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
 	config.vm.synced_folder "ProjectLinks/raven-customer", "/var/www/ccinquiry.com", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
 	#
@@ -110,10 +113,10 @@ Vagrant.configure("2") do |config|
 	#
 	# Specify a folder for various vagrant data. A MySQL data folder would be appropriate here (for example).
 	config.vm.synced_folder "xdebug", "/var/xdebug", :mount_options => [ "dmode=777", "fmode=777" ]
- 	config.vm.synced_folder "ssl", "/etc/apache2/ssl", :mount_options => [ "dmode=777", "fmode=777" ]
- 	config.vm.synced_folder "conf", "/var/vagrant/conf", :mount_options => [ "dmode=777", "fmode=777" ]
- 	config.vm.synced_folder "mysql", "/var/vagrant/mysql", :mount_options => [ "dmode=777", "fmode=777" ]
- 	config.vm.synced_folder "bin", "/var/vagrant/bin", :mount_options => [ "dmode=777", "fmode=777" ]
+	config.vm.synced_folder "ssl", "/etc/apache2/ssl", :mount_options => [ "dmode=777", "fmode=777" ]
+	config.vm.synced_folder "conf", "/var/vagrant/conf", :mount_options => [ "dmode=777", "fmode=777" ]
+	config.vm.synced_folder "mysql", "/var/vagrant/mysql", :mount_options => [ "dmode=777", "fmode=777" ]
+	config.vm.synced_folder "bin", "/var/vagrant/bin", :mount_options => [ "dmode=777", "fmode=777" ]
 
 	# Custom Mappings - POSSIBLY UNSTABLE
 	#
