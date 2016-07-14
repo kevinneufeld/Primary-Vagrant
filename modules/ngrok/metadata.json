@@ -1,0 +1,30 @@
+{
+  "name": "thekevjames-ngrok",
+  "version": "1.0.1",
+  "author": "thekevjames",
+  "summary": "Ngrok management",
+  "license": "Apache-2.0",
+  "source": "https://github.com/TheKevJames/puppet-ngrok",
+  "project_page": "https://github.com/TheKevJames/puppet-ngrok",
+  "issues_url": "https://github.com/TheKevJames/puppet-ngrok/issues",
+  "dependencies": [
+    {"name": "puppetlabs/stdlib", "version_requirement": ">= 4.2.0 < 5.0.0"}
+  ],
+  "data_provider": "hiera",
+  "operatingsystem_support": [
+    { "operatingsystem": "CentOS" },
+    { "operatingsystem": "Debian" },
+    { "operatingsystem": "OracleLinux" },
+    { "operatingsystem": "OSX" },
+    { "operatingsystem": "RedHat" },
+    { "operatingsystem": "Scientific" },
+    { "operatingsystem": "SLES" },
+    { "operatingsystem": "Ubuntu" }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.0.0 < 5.0.0"
+    }
+  ]
+}

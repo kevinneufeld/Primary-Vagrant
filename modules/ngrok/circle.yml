@@ -1,0 +1,17 @@
+dependencies:
+  pre:
+    - sudo apt-get update; sudo apt-get install ruby gem
+    - sudo gem install bundle
+  override:
+    - sudo bundle install --system --jobs=4 --retry=3
+  post:
+    - sudo bundle exec puppet module build
+    - sudo bundle exec puppet module install pkg/thekevjames-ngrok-*.tar.gz
+
+test:
+  override:
+    - sudo bundle exec rake validate
+    - sudo bundle exec puppet apply tests
+  post:
+    - /opt/ngrok version
+    - cat /home/ubuntu/.ngrok2/ngrok.yml

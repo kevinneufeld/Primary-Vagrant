@@ -23,6 +23,30 @@ package { 'ntp':
 	ensure => 'installed'
 }
 
+package { 'memcached':
+  ensure => 'installed'
+}
+package { 'curl':
+  ensure => 'installed',
+}
+package { 'unzip':
+  ensure => 'installed',
+}
+package { 'freetds-common':
+  ensure => 'installed',
+}
+package { 'freetds-bin':
+  ensure => 'installed',
+}
+package { 'unixodbc':
+  ensure => 'installed',
+}
+package { 'unixodbc-dev':
+  ensure => 'installed',
+}
+package { 'php5-sybase':
+  ensure => 'installed',
+}
 class { 'ohmyzsh': }
 
 ohmyzsh::install { 'vagrant': }
@@ -63,23 +87,23 @@ apache::vhost { 'replacedb.pv':
 	template                 => '/var/vagrant/conf/vhost.conf.erb',
 }
 
-apache::vhost { 'core.wordpress.pv':
-	serveraliases            => 'wordpress.core.pv',
-	docroot                  => '/var/www/core.wordpress.pv/src',
-	directory                => '/var/www/core.wordpress.pv/src',
-	directory_allow_override => 'All',
-	ssl                      => true,
-	template                 => '/var/vagrant/conf/vhost.conf.erb',
-}
+# apache::vhost { 'core.wordpress.pv':
+#   serveraliases            => 'wordpress.core.pv',
+#   docroot                  => '/var/www/core.wordpress.pv/src',
+#   directory                => '/var/www/core.wordpress.pv/src',
+#   directory_allow_override => 'All',
+#   ssl                      => true,
+#   template                 => '/var/vagrant/conf/vhost.conf.erb',
+# }
 
-apache::vhost { 'legacy.wordpress.pv':
-	serveraliases            => 'wordpress.legacy.pv',
-	docroot                  => '/var/www/legacy.wordpress.pv/htdocs',
-	directory                => '/var/www/legacy.wordpress.pv/htdocs',
-	directory_allow_override => 'All',
-	ssl                      => true,
-	template                 => '/var/vagrant/conf/vhost.conf.erb',
-}
+# apache::vhost { 'legacy.wordpress.pv':
+#   serveraliases            => 'wordpress.legacy.pv',
+#   docroot                  => '/var/www/legacy.wordpress.pv/htdocs',
+#   directory                => '/var/www/legacy.wordpress.pv/htdocs',
+#   directory_allow_override => 'All',
+#   ssl                      => true,
+#   template                 => '/var/vagrant/conf/vhost.conf.erb',
+# }
 
 apache::vhost { 'stable.wordpress.pv':
 	serveraliases            => 'wordpress.stable.pv',
@@ -90,14 +114,14 @@ apache::vhost { 'stable.wordpress.pv':
 	template                 => '/var/vagrant/conf/vhost.conf.erb',
 }
 
-apache::vhost { 'trunk.wordpress.pv':
-	serveraliases            => 'wordpress.trunk.pv',
-	docroot                  => '/var/www/trunk.wordpress.pv/htdocs',
-	directory                => '/var/www/trunk.wordpress.pv/htdocs',
-	directory_allow_override => 'All',
-	ssl                      => true,
-	template                 => '/var/vagrant/conf/vhost.conf.erb',
-}
+# apache::vhost { 'trunk.wordpress.pv':
+#   serveraliases            => 'wordpress.trunk.pv',
+#   docroot                  => '/var/www/trunk.wordpress.pv/htdocs',
+#   directory                => '/var/www/trunk.wordpress.pv/htdocs',
+#   directory_allow_override => 'All',
+#   ssl                      => true,
+#   template                 => '/var/vagrant/conf/vhost.conf.erb',
+# }
 
 apache::vhost { 'webgrind.pv':
 	docroot                  => '/var/www/webgrind.pv',
@@ -120,11 +144,13 @@ class { 'phpunit':
 }
 
 php::module { 'mysql': }
+php::module { 'sqlite': } -> php::mod { 'sqlite3': }
 php::module { 'cli': }
 php::module { 'curl': }
 php::module { 'gd': }
 php::module { 'imagick': }
 php::module { 'mcrypt': }
+php::module { 'memcache': }
 php::pecl::module { 'xdebug': }
 
 exec { 'enabling_mcrypt':
@@ -267,28 +293,34 @@ mysql_database { 'stable.wordpress.pv':
 	require => Class['mysql::server'],
 }
 
-mysql_database { 'legacy.wordpress.pv':
-	ensure  => 'present',
-	charset => 'utf8',
-	collate => 'utf8_general_ci',
-	require => Class['mysql::server'],
-}
+# mysql_database { 'legacy.wordpress.pv':
+#   ensure  => 'present',
+#   charset => 'utf8',
+#   collate => 'utf8_general_ci',
+#   require => Class['mysql::server'],
+# }
 
-mysql_database { 'trunk.wordpress.pv':
-	ensure  => 'present',
-	charset => 'utf8',
-	collate => 'utf8_general_ci',
-	require => Class['mysql::server'],
-}
+# mysql_database { 'trunk.wordpress.pv':
+#   ensure  => 'present',
+#   charset => 'utf8',
+#   collate => 'utf8_general_ci',
+#   require => Class['mysql::server'],
+# }
 
-mysql_database { 'core.wordpress.pv':
-	ensure  => 'present',
-	charset => 'utf8',
-	collate => 'utf8_general_ci',
-	require => Class['mysql::server'],
-}
+# mysql_database { 'core.wordpress.pv':
+#   ensure  => 'present',
+#   charset => 'utf8',
+#   collate => 'utf8_general_ci',
+#   require => Class['mysql::server'],
+# }
 
-mysql_database { 'tests.core.wordpress.pv':
+# mysql_database { 'tests.core.wordpress.pv':
+#   ensure  => 'present',
+#   charset => 'utf8',
+#   collate => 'utf8_general_ci',
+#   require => Class['mysql::server'],
+# }
+mysql_database { 'wordpress.rustycog.com':
 	ensure  => 'present',
 	charset => 'utf8',
 	collate => 'utf8_general_ci',
@@ -310,7 +342,7 @@ mysql_grant { 'username@localhost/*.*':
 	require    => Class['mysql::server'],
 }
 
-class { 'mailcatcher': }
+#class { 'mailcatcher': }
 
 file { '/var/www/phpmyadmin.pv/phpmyadmin/config.inc.php':
 	ensure => 'link',
@@ -333,3 +365,4 @@ file { 'sudoers':
 }
 
 import 'sites/*.pp'
+import 'mymodules/*.pp'
