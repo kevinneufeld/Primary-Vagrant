@@ -320,12 +320,6 @@ mysql_database { 'stable.wordpress.pv':
 #   collate => 'utf8_general_ci',
 #   require => Class['mysql::server'],
 # }
-mysql_database { 'wordpress.rustycog.com':
-	ensure  => 'present',
-	charset => 'utf8',
-	collate => 'utf8_general_ci',
-	require => Class['mysql::server'],
-}
 
 mysql_user { 'username@localhost':
 	ensure        => 'present',
